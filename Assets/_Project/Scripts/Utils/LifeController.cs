@@ -5,13 +5,13 @@ public class LifeController : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private int maxHp = 100;
     [SerializeField] private int hp = 100;
-    private PlayerDamage playerDamage;
+    private FlashOnDamage playerDamage;
     private bool isDead = false;
 
     private void Awake()
     {
         animator = GetComponentInChildren<Animator>();
-        playerDamage = GetComponent<PlayerDamage>();
+        playerDamage = GetComponent<FlashOnDamage>();
         maxHp = Mathf.Min(maxHp, 999);
         hp = Mathf.Clamp(hp, 0, maxHp);
     }
@@ -63,6 +63,10 @@ public class LifeController : MonoBehaviour
         EnemyDrop drop = GetComponent<EnemyDrop>();
         if (drop != null)
             drop.TryDrop();
+
+        Collider2D col = GetComponent<Collider2D>();    //serve per non far slidare via l'enemy al contatto con il player
+        if (col != null)
+            col.isTrigger = true;
 
         Destroy(gameObject, 1f);
     }

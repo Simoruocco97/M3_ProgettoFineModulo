@@ -11,29 +11,31 @@ public class EnemiesAnimationHandler : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    public void MovementAnimation(Vector2 speed)
+    public void MovementAnimation(Vector2 dir)
     {
-        animator.SetFloat(verticalSpeedName, speed.y);
-        animator.SetFloat(horizontalSpeedName, speed.x);
+        bool isMoving;
+
+        animator.SetFloat(verticalSpeedName, dir.y);
+        animator.SetFloat(horizontalSpeedName, dir.x);
+
+        if (dir.x != 0f || dir.y != 0f)
+        {
+            isMoving = true;
+        }
+        else
+        {
+            isMoving = false;
+        }
+        animator.SetBool("isMoving", isMoving);
     }
 
-    public void PlayDamageAnimation()
-    {
-        animator.SetBool("isDamaged", true);
-    }
+    //public void PlayDamageAnimation()
+    //{
+    //    animator.SetBool("isDamaged", true);
+    //}
 
-    public void StopDamageAnimation()
-    {
-        animator.SetBool("isDamaged", false);
-    }
-
-    public void DeathAnimation()
-    {
-        animator.SetBool("isDead", true);
-    }
-
-    public void DeathAnimationEnd()
-    {
-        Destroy(gameObject);
-    }
+    //public void StopDamageAnimation()
+    //{
+    //    animator.SetBool("isDamaged", false);
+    //}
 }

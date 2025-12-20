@@ -14,11 +14,12 @@ GameObject:
   - component: {fileID: 1692066446287726457}
   - component: {fileID: 4665211372102772924}
   - component: {fileID: 4616396977868203587}
+  - component: {fileID: 1245361194463296669}
   - component: {fileID: 8628592235760076382}
   - component: {fileID: 5691682764085412991}
   - component: {fileID: 2028098384235092081}
   m_Layer: 7
-  m_Name: Enemy
+  m_Name: Lion
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -80,7 +81,7 @@ SpriteRenderer:
   m_SortingLayerID: 627457737
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: -511852076, guid: 8f8186cb1e57ab247a838a59010dfa5e, type: 3}
+  m_Sprite: {fileID: -338218079, guid: c5e97dde1a44a5e4dbe1be46b3ab6f64, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -132,7 +133,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coin: {fileID: 3997937322085300298, guid: 4d537220a2a2c0442834113933c0530f, type: 3}
-  dropChance: 10
+  dropChance: 15
 --- !u!114 &4616396977868203587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,9 +146,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d304eb2b06236784480508a922bf1227, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  maxHp: 100
-  hp: 100
+  animator: {fileID: 2028098384235092081}
+  maxHp: 150
+  hp: 150
+--- !u!114 &1245361194463296669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7221795529696199979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ca550dd6c211b847a330b30a692ff5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 0.2
 --- !u!50 &8628592235760076382
 Rigidbody2D:
   serializedVersion: 4
@@ -220,7 +234,7 @@ Animator:
   m_GameObject: {fileID: 7221795529696199979}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: aad8c1aae2184e34b8d0664e6a899a46, type: 2}
+  m_Controller: {fileID: 9100000, guid: 581dfa0cbf4720942a79e38fdae27d1c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
