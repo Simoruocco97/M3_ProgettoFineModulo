@@ -40,18 +40,8 @@ public class PlayerAnimationHandler : MonoBehaviour
         animator.SetBool("isDamaged", true);
     }
 
-    public void StopDamageAnimation()
-    {
-        animator.SetBool("isDamaged", false);
-    }
-
     public void DeathAnimation()
     {
         animator.SetBool("isDead", true);
-    }
-
-    public void DeathAnimationEnd()
-    {
-        Destroy(GetComponentInParent<PlayerController>().gameObject);
     }
 }

@@ -28,14 +28,4 @@ public class EnemiesAnimationHandler : MonoBehaviour
         }
         animator.SetBool("isMoving", isMoving);
     }
-
-    //public void PlayDamageAnimation()
-    //{
-    //    animator.SetBool("isDamaged", true);
-    //}
-
-    //public void StopDamageAnimation()
-    //{
-    //    animator.SetBool("isDamaged", false);
-    //}
 }

@@ -212,7 +212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56579782550fd734dae9944da016336f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
+  damage: 50
   fireRate: 2
   bulletPrefabs:
   - {fileID: 5309871388517539975, guid: 8cad16560933fc046aacc77ebe3da4dc, type: 3}
@@ -222,6 +222,7 @@ MonoBehaviour:
   - {fileID: 5309871388517539975, guid: e2cb566ffa21ff54f9fc0a4d9cf2237b, type: 3}
   - {fileID: 5309871388517539975, guid: e55d974dac743bd49969582a93528ab2, type: 3}
   - {fileID: 5309871388517539975, guid: 487573443c2cb8f4ba34e11b8c5a6217, type: 3}
+  pSounds: {fileID: 0}
 --- !u!114 &405388946838296687
 MonoBehaviour:
   m_ObjectHideFlags: 0

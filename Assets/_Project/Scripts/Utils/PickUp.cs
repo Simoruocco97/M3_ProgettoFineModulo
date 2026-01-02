@@ -3,6 +3,15 @@ using UnityEngine;
 public class PickUp : MonoBehaviour
 {
     private PlayerInventory inventory;
+    private SoundManager soundManager;
+
+    private void Awake()
+    {
+        if (soundManager == null)
+        {
+            soundManager = FindObjectOfType<SoundManager>();
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -10,6 +19,7 @@ public class PickUp : MonoBehaviour
         {
             inventory = collision.GetComponent<PlayerInventory>();
             inventory.AddCoin(1);
+            soundManager.PlayCoinPickup();
             Destroy(gameObject);
         }
     }

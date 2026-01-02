@@ -6,7 +6,6 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float speed = 2f;
 
     private LifeController life;
-    private EnemyDrop drop;
     private EnemiesAnimationHandler anim;
     private Transform playerTransform;
     private Rigidbody2D rb;
@@ -14,7 +13,6 @@ public class Enemy : MonoBehaviour
     private void Awake()
     {
         life = GetComponent<LifeController>();
-        drop = GetComponent<EnemyDrop>();
         anim = GetComponentInChildren<EnemiesAnimationHandler>();
         rb = GetComponent<Rigidbody2D>();
     }
@@ -51,5 +49,4 @@ public class Enemy : MonoBehaviour
         if (life != null)
             life.SetHp(0);
     }
-
 }
