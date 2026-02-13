@@ -11,8 +11,6 @@ public class SoundManager : MonoBehaviour
         {
             audioSource = GetComponent<AudioSource>();
         }
-
-        backgroundSound = GameObject.Find("Background").GetComponent<AudioSource>();
     }
 
     public void PlayShootSound()
